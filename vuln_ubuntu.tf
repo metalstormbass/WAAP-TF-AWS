@@ -18,7 +18,5 @@ resource "aws_instance" "vuln_vm" {
   vpc_security_group_ids = [aws_security_group.waap_ssh.id, aws_security_group.waap_http.id]
   key_name = var.key_name
   user_data = data.template_file.userdata_setup.rendered
-  tags {
-    "Name" = var.victim_company
-  }
+ 
 }
