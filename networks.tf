@@ -2,7 +2,7 @@
 resource "aws_vpc" "waapdemovpc" {
   cidr_block = var.aws_vpc_cidr
   tags = {
-    Name = ${var.victm_company}-vpc
+    Name = var.victm_company
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_subnet" "external" {
   map_public_ip_on_launch = true
   availability_zone       = var.primary_az
   tags = {
-    Name = ${var.victm_company}-subnet
+    Name = var.victm_company
   }
 }
 
@@ -43,7 +43,7 @@ egress {
     cidr_blocks = [var.source_ip]
   }
 tags {
-    "Name" = "${var.victm_company}-ssh-sg"
+    "Name" = var.victm_company
   }
 }
 resource "aws_security_group" "waap_http" {
@@ -62,6 +62,6 @@ egress {
     cidr_blocks = [var.source_ip]
   }
 tags {
-    "Name" = ${var.victm_company}-ssh-sg
+    "Name" = var.victm_company
   }
 }
