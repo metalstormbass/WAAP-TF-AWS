@@ -19,6 +19,6 @@ resource "aws_instance" "vuln_vm" {
   key_name = "${var.key_pair_name}"
   user_data = data.template_file.userdata_setup.rendered
   tags {
-    "Name" = "${var.victm_company}-vm"
+    "Name" = ${var.victm_company}-vm
   }
 }

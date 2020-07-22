@@ -33,7 +33,7 @@ variable "aws_subnet_cidr" {
 variable "source_ip" {
   description = "source ip"
   type        = string
-  default = 0.0.0.0/0
+  default = "0.0.0.0/0"
 }
 
 #AMI - You must adjust this based on the region you're in
