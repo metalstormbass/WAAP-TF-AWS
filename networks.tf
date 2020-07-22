@@ -28,7 +28,7 @@ resource "aws_internet_gateway" "default_internet_gateway" {
 #Create security groups 
 
 resource "aws_security_group" "waap_ssh" {
-  name = "${var.victm_company}-ssh-sg"
+  name = "${var.victim_company}-ssh-sg"
   vpc_id = aws_vpc.waapdemovpc.id
 ingress {
       from_port   = 22
@@ -43,11 +43,11 @@ egress {
     cidr_blocks = [var.source_ip]
   }
 tags {
-    "Name" = var.victm_company
+    "Name" = var.victim_company
   }
 }
 resource "aws_security_group" "waap_http" {
-  name = "${var.victm_company}-http-sg"
+  name = "${var.victim_company}-http-sg"
   vpc_id = aws_vpc.waapdemovpc.id
 ingress {
       from_port   = 80
