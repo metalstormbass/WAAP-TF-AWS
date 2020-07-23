@@ -82,5 +82,5 @@ resource "aws_eip" "waap_eip" {
   vpc                       = true
   network_interface         = aws_network_interface.waap-nic.id
   associate_with_private_ip = var.waap_private
-  depends_on = aws_internet_gateway.waap_demo_gateway
+  depends_on = [aws_internet_gateway.waap_demo_gateway]
 }
