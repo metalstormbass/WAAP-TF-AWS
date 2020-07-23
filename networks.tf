@@ -31,6 +31,8 @@ resource "aws_route_table" "waap_route_table" {
     ipv6_cidr_block        = "::/0"
     egress_only_gateway_id = aws_internet_gateway.waap_demo_gateway.id
   }
+  
+  }
 
 #Associate Route Table to Subnet
 resource "aws_route_table_association" "waap_route_association" {
