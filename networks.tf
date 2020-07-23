@@ -20,7 +20,7 @@ resource "aws_subnet" "external" {
 
 #Create a Route Table
 resource "aws_route_table" "waap_route_table" {
-  vpc_id = "${aws_vpc.waapdemovpc.id}"
+  vpc_id = aws_vpc.waapdemovpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -29,7 +29,7 @@ resource "aws_route_table" "waap_route_table" {
   
   route {
     ipv6_cidr_block        = "::/0"
-    egress_only_gateway_id = aws_internet_gateway.waap_demo_gateway.id
+    gateway_id = aws_internet_gateway.waap_demo_gateway.id
   }
   
   }

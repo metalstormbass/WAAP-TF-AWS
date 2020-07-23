@@ -15,7 +15,6 @@ resource "aws_instance" "vuln_vm" {
   availability_zone = var.primary_az
   ami           = var.ubuntu_ami
   instance_type = "t2.micro"
-  subnet_id = aws_subnet.external.id
   key_name = var.key_name
   network_interface {
         device_index = 0
