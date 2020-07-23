@@ -29,6 +29,12 @@ variable "aws_subnet_cidr" {
   type        = string
 }
 
+#Server Private IP
+variable "waap_private" {
+  description = "waap_private_ip"
+  type        = string
+}
+
 #Source IP address
 variable "source_ip" {
   description = "source ip"

@@ -12,11 +12,16 @@ data "template_file" "userdata_setup" {
 
 
 resource "aws_instance" "vuln_vm" {
+  availability_zone = var.primary_az
   ami           = var.ubuntu_ami
   instance_type = "t2.micro"
   subnet_id = aws_subnet.external.id
-  vpc_security_group_ids = [aws_security_group.waap_ssh.id, aws_security_group.waap_http.id]
   key_name = var.key_name
+  network_interface {
+        device_index = 0
+        network_interface_id = aws_network_interface.waap-nic.id
+  }
+  
   user_data = data.template_file.userdata_setup.rendered
  
 }
