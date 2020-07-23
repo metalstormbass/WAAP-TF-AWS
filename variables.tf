@@ -54,18 +54,6 @@ variable "key_name" {
   description = "Desired name of AWS key pair"
 }
 
-# username
-variable "username" {
-  type        = string
-  description = "Username"
-}
-
-# password
-variable "password" {
-  type        = string
-  description = "Password"
-}
-
 # token
 variable "token" {
   type        = string

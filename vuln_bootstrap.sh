@@ -45,14 +45,16 @@ sudo service nginx restart
 sleep 2
 sudo nginx -s reload
 
+dir=$(pwd)
+
 # Download the CPnanoAgent
 until curl \
-    --output /home/$name/cp-nano-egg.sh \
+    --output $dir/cp-nano-egg.sh \
     --url https://cpnano-jongoldman-test.s3.amazonaws.com/cp-nano-egg.sh ; do
     sleep 1
 done
 
 # Install CP Nano Agent
-sudo chmod 755 /home/$name/cp-nano-egg.sh
+sudo chmod 755 $dir/cp-nano-egg.sh
 sleep 1
-sudo /home/$name/cp-nano-egg.sh --install --ignore accessControl --token $token 
+sudo $dir/cp-nano-egg.sh --install --ignore accessControl --token $token 
