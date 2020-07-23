@@ -38,7 +38,7 @@ resource "aws_route_table" "waap_route_table" {
 resource "aws_route_table_association" "waap_route_association" {
     subnet_id = aws_subnet.external.id
     route_table_id = aws_route_table.waap_route_table.id
-
+}
 
 
 #Create security groups 
