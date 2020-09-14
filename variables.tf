@@ -14,7 +14,7 @@ variable "aws_region" {
 #AWS AZ
 variable "primary_az" {
   description = "primary AZ"
-  default     = "us-east-2a"
+  default     = "us-east-1"
 }
 
 #AWS VPC CIDR
