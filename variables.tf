@@ -8,13 +8,13 @@ variable "victim_company" {
 #AWS Region
 variable "aws_region" {
   description = "AWS region to launch servers."
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
 
 #AWS AZ
 variable "primary_az" {
   description = "primary AZ"
-  default     = "us-east-1"
+  default     = "us-east-1a"
 }
 
 #AWS VPC CIDR
