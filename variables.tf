@@ -45,7 +45,7 @@ variable "source_ip" {
 #AMI - You must adjust this based on the region you're in
 variable "ubuntu_ami" {
   description = "Desired name of AWS key pair"
-  default = "ami-0a63f96e85105c6d3"
+  default = "ami-06b263d6ceff0b3dd"
 }
 
 
