@@ -23,3 +23,8 @@ resource "aws_instance" "vuln_vm" {
   user_data = data.template_file.userdata_setup.rendered
  
 }
+
+output "public_ip" {
+  description = "List of public IP addresses assigned to the instances, if applicable"
+  value       = aws_instance.vuln_vm.public_ip
+}

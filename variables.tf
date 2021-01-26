@@ -19,7 +19,7 @@ variable "primary_az" {
 
 #AWS VPC CIDR
 variable "aws_vpc_cidr" {
-  description = "aws vpc cide"
+  description = "aws vpc cidr"
   type        = string
 }
 
