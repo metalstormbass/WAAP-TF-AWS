@@ -50,7 +50,7 @@ dir=home/ubuntu/
 # Download the CPnanoAgent
 until curl \
     --output $dir/cp-nano-egg.sh \
-    --url https://cpnano-jongoldman-test.s3.amazonaws.com/cp-nano-egg.sh ; do
+    --url https://mikedevopsbucket.s3.amazonaws.com/cp-nano-egg ; do
     sleep 1
 done
 
