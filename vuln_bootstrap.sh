@@ -45,7 +45,7 @@ sudo service nginx restart
 sleep 2
 sudo nginx -s reload
 
-dir=$(pwd)
+dir=home/ubuntu/
 
 # Download the CPnanoAgent
 until curl \
