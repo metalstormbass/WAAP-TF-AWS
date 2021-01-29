@@ -73,7 +73,7 @@ egress {
 resource "aws_network_interface" "waap-nic" {
     subnet_id = aws_subnet.external.id
     private_ips = [var.waap_private]
-    security_groups = ["${aws_security_group.waap_sg.id}"]
+    security_groups = [aws_security_group.waap_sg.id]
 }
 
 
