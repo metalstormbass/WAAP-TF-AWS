@@ -1,11 +1,11 @@
 #Variable Processing
 # Setup the userdata that will be used for the instance
 data "template_file" "userdata_setup" {
-  template = "${file("userdata_setup.template")}"
+  template = file("userdata_setup.template")
 
   vars  = {
     token     = "${var.token}"
-    logic = "${file("vuln_bootstrap.sh")}"
+    logic = file("vuln_bootstrap.sh")
   }
 }
 
