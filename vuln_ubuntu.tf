@@ -4,7 +4,7 @@ data "template_file" "userdata_setup" {
   template = file("userdata_setup.template")
 
   vars  = {
-    token     = "${var.token}"
+    token     = var.token
     logic = file("vuln_bootstrap.sh")
   }
 }
